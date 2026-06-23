@@ -28,6 +28,7 @@ jobs:
         run: |
           gcloud config set project dev-500104
           gcloud config list
+          gcloud projects describe dev-500104 --format="value(projectNumber)"
       - name: Configure Docker
         run: |
           gcloud auth configure-docker us-central1-docker.pkg.dev --quiet
