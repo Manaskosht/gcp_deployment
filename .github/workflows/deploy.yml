@@ -32,9 +32,6 @@ jobs:
       - name: Build Image
         run: |
           docker build \
-          - name: Build Image
-        run: |
-          docker build \
             -t us-central1-docker.pkg.dev/dev-500104/app-repo/demo-app:${{ github.sha }} \
             -f ./app/Dockerfile \
             ./app
