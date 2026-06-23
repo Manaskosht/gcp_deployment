@@ -42,7 +42,7 @@ jobs:
           docker push \
           us-central1-docker.pkg.dev/${{ secrets.PROJECT_ID }}/app-repo/demo-app:${{ github.sha }}
 
-      - name: Deploy Cloud Run
+      - name: Deploy Cloud Ru
         run: |
           gcloud run deploy demo-app \
           --image us-central1-docker.pkg.dev/${{ secrets.PROJECT_ID }}/app-repo/demo-app:${{ github.sha }} \
