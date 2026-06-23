@@ -38,8 +38,7 @@ jobs:
 
       - name: Push Image
         run: |
-          docker push \
-          us-central1-docker.pkg.dev/${{ secrets.PROJECT_ID }}/app-repo/demo-app:${{ github.sha }}
+           docker push us-central1-docker.pkg.dev/dev-500104/app-repo/demo-app:${{ github.sha }}
 
       - name: Deploy Cloud Run
         run: |
