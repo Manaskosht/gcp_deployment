@@ -47,7 +47,8 @@ jobs:
       - name: Deploy Cloud Run
         run: |
           gcloud run deploy demo-app \
-          --image us-central1-docker.pkg.dev/${{ secrets.PROJECT_ID }}/app-repo/demo-app:${{ github.sha }} \
-          --region us-central1 \
-          --platform managed \
-          --allow-unauthenticated
+            --image us-central1-docker.pkg.dev/dev-500104/app-repo/demo-app:${{ github.sha }} \
+            --region us-central1 \
+            --project dev-500104 \
+            --platform managed \
+            --allow-unauthenticated
