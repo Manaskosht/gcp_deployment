@@ -24,7 +24,10 @@ jobs:
 
       - name: Setup GCloud
         uses: google-github-actions/setup-gcloud@v2
-
+      - name: Set Project
+        run: |
+          gcloud config set project dev-500104
+          gcloud config list
       - name: Configure Docker
         run: |
           gcloud auth configure-docker us-central1-docker.pkg.dev --quiet
