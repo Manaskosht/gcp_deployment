@@ -22,7 +22,7 @@ jobs:
         uses: google-github-actions/auth@v2 
         with: 
           workload_identity_provider: ${{ secrets.WIF_PROVIDER }} 
-          service_account: ${{ dev-777@project-ebf080ef-f8f0-47b3-806.iam.gserviceaccount.com }} 
+          service_account: ${{ secrets.PROJECT_ID }} 
           token_format: access_token
           
       - name: Set up auth for Docker
